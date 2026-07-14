@@ -316,3 +316,12 @@ This project demonstrates practical implementation of:
 * Streamlit Application Development
 * Database Management
 * AI-based Career Recommendation
+
+## 🌐 Live Demo
+
+https://ai-resume-analyzer-j89uahnkd3anu6v7rypnta.streamlit.app
+
+
+## 💻 Source Code
+
+https://github.com/NITHYA123-hub/AI-Resume-Analyzer
