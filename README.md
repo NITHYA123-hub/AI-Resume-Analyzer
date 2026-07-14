@@ -1,82 +1,318 @@
-# 🚀 AI Resume Analyzer & Industry Fit Recommendation System
+# 🤖 AI Resume Analyzer & Industry Fit Recommendation System
 
-
-## 📌 Overview
-
-AI Resume Analyzer is a Machine Learning based application that analyzes resumes and predicts the most suitable industry for candidates.
-
-The system uses Natural Language Processing (NLP), TF-IDF feature extraction, and Machine Learning classification to evaluate resumes.
-
-It also provides:
-
-- Resume score
-- ATS compatibility score
-- Skill gap analysis
-- Strength identification
-- Career improvement recommendations
-- Downloadable analysis report
-
+An AI-powered resume intelligence platform that analyzes resumes, predicts suitable industries, evaluates resume quality, identifies skill gaps, and recommends suitable career opportunities using Machine Learning and Natural Language Processing.
 
 ---
 
-# 🎯 Problem Statement
-
-Students and job seekers often struggle to understand:
-
-- Which industry best matches their skills
-- What skills they are missing
-- How strong their resume is
-- How to improve their career opportunities
-
-This project provides an AI-powered solution for resume evaluation and career guidance.
-
-
----
-
-# ✨ Features
+# 🚀 Features
 
 ## 📄 Resume Upload
 
-Supports:
+Supports multiple resume formats:
 
-✅ PDF  
-✅ DOCX  
-✅ TXT  
-✅ Image Resume (OCR)  
-✅ Text Input  
+* PDF
+* DOCX
+* TXT
+* Images (OCR)
+* Manual text input
 
+---
 
-## 🤖 Machine Learning Prediction
+## 🧠 AI Industry Prediction
 
-Predicts suitable industries using:
+Uses Machine Learning and NLP techniques to predict the best-fit industry based on resume content.
 
-- Logistic Regression
-- Decision Tree
-- Random Forest
-- Naive Bayes
-- KNN
+Example:
 
+```
+Input:
+Resume Skills + Experience
 
-## 📊 Resume Analysis
+Output:
+Recommended Industry:
+Data Science
+
+Confidence:
+95%
+```
+
+---
+
+## 📊 Resume Evaluation
+
+The system calculates:
+
+* Resume Score
+* ATS Compatibility Score
+* Skill Match Percentage
+* Resume Strength Analysis
+
+---
+
+## 🎯 Skill Gap Analysis
+
+Identifies:
+
+✅ Available skills
+❌ Missing skills
+
+and suggests areas for improvement.
+
+---
+
+## 💼 AI Job Recommendation
+
+Matches candidate skills with job requirements and recommends suitable roles.
+
+Example:
+
+```
+Recommended Jobs:
+
+1. Data Analyst
+2. Data Scientist
+3. Machine Learning Engineer
+```
+
+---
+
+## 📜 Analysis History
+
+Stores previous resume analysis results using SQLite database.
+
+Stores:
+
+* Candidate Name
+* Predicted Industry
+* Confidence Score
+* Resume Score
+* ATS Score
+* Analysis Date
+
+---
+
+## 📊 Analytics Dashboard
 
 Provides:
 
-- Industry recommendation
-- Prediction confidence
-- Resume score /100
-- ATS score
-- Skill matching
-- Missing skills
-- Strength analysis
-- Improvement suggestions
-
-
-## 📥 Report Generation
-
-Users can download their complete resume analysis report.
-
+* Total candidates analyzed
+* Average resume score
+* Average ATS score
+* Industry distribution charts
+* Candidate history overview
 
 ---
 
 # 🏗️ Project Architecture
 
+```
+AI-Resume-Analyzer/
+
+│
+├── app.py
+│
+├── pages/
+│   │
+│   ├── 1_Home.py
+│   ├── 2_Upload.py
+│   ├── 3_Analysis.py
+│   ├── 4_Model_Performance.py
+│   ├── 5_About.py
+│   ├── 6_History.py
+│   ├── 7_Job_Recommendation.py
+│   └── 8_Analytics.py
+│
+├── data/
+│   │
+│   ├── resumes.csv
+│   └── jobs.csv
+│
+├── models/
+│   │
+│   ├── best_model.pkl
+│   └── tfidf.pkl
+│
+├── utils/
+│   │
+│   ├── preprocessing.py
+│   ├── scoring.py
+│   ├── skills.py
+│   ├── file_handler.py
+│   ├── database.py
+│   └── job_recommendation.py
+│
+├── database/
+│   └── history.db
+│
+├── requirements.txt
+│
+└── README.md
+```
+
+---
+
+# 🛠️ Technology Stack
+
+## Programming Language
+
+* Python
+
+## Machine Learning
+
+* Scikit-learn
+* TF-IDF Vectorization
+* Classification Algorithms
+
+## NLP
+
+* Text preprocessing
+* Resume feature extraction
+* Skill extraction
+
+## Data Processing
+
+* Pandas
+* NumPy
+
+## Visualization
+
+* Matplotlib
+* Streamlit Charts
+
+## Database
+
+* SQLite
+
+## Deployment
+
+* Streamlit Cloud
+* GitHub
+
+---
+
+# ⚙️ Installation
+
+Clone repository:
+
+```bash
+git clone https://github.com/yourusername/AI-Resume-Analyzer.git
+```
+
+Navigate to project:
+
+```bash
+cd AI-Resume-Analyzer
+```
+
+Install dependencies:
+
+```bash
+pip install -r requirements.txt
+```
+
+---
+
+# ▶️ Run Application
+
+Start Streamlit:
+
+```bash
+streamlit run app.py
+```
+
+---
+
+# 🔄 Workflow
+
+```
+Upload Resume
+
+        ↓
+
+Text Extraction
+
+        ↓
+
+NLP Preprocessing
+
+        ↓
+
+TF-IDF Feature Extraction
+
+        ↓
+
+Machine Learning Prediction
+
+        ↓
+
+Resume Scoring
+
+        ↓
+
+Job Recommendation
+
+        ↓
+
+Save Analysis History
+```
+
+---
+
+# 📈 Machine Learning Pipeline
+
+```
+Resume Dataset
+
+      ↓
+
+Text Cleaning
+
+      ↓
+
+TF-IDF Vectorization
+
+      ↓
+
+Model Training
+
+      ↓
+
+Industry Prediction
+
+      ↓
+
+Performance Evaluation
+```
+
+---
+
+# 🎯 Future Enhancements
+
+* Real-time job API integration
+* Resume improvement suggestions using Generative AI
+* Interview question generation
+* Cloud database integration
+* User authentication
+* Mobile application
+
+---
+
+# 👩‍💻 Author
+
+**Nithya L**
+
+Computer Science Engineering
+Data Science Specialization
+
+---
+
+# ⭐ Project Highlights
+
+This project demonstrates practical implementation of:
+
+* Machine Learning
+* Natural Language Processing
+* Data Analytics
+* Streamlit Application Development
+* Database Management
+* AI-based Career Recommendation
